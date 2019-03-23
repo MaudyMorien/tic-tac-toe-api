@@ -18,7 +18,7 @@ import { defaultBoard, moves, color, randomColor } from './gameLogic'
 export default class GameController {
 
     @Get('/games')
-    @HttpCode(201)
+    @HttpCode(200)
     async allGames() {
         const games: Game[] = await Game.find()
         return { games }
@@ -26,7 +26,7 @@ export default class GameController {
 
     //Want to know if this is also valid like the get games by id
     //@get('/games)
-    //@HttpCode(201)
+    //@HttpCode(200)
     //async allGames() {
     //return Game.find()
     //}
